@@ -1,0 +1,13 @@
+# Apache: редиректы со старого PHP-сайта (для статической сборки в dist/)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^index\.php$ / [R=301,L]
+
+  RewriteRule ^price(/.*)?$ /uslugi/ [R=301,L]
+  RewriteRule ^gallery(/.*)?$ /kontakty/ [R=301,L]
+
+  RewriteRule ^sovety/index\.php$ /sovety/ [R=301,L]
+  RewriteRule ^sovety/([^/]+)\.php$ /sovety/$1/ [R=301,L]
+</IfModule>
