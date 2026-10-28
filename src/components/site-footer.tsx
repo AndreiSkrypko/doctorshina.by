@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand/brand-logo";
+import { HomeLogoLink } from "@/components/home-logo-link";
 import { footerNav, phones } from "@/lib/site";
 import { servicesCatalog } from "@/lib/services";
 
@@ -10,9 +11,9 @@ export function SiteFooter() {
       <div className="section-glow mx-auto max-w-7xl px-4 py-16 md:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link href="/" className="inline-block">
+            <HomeLogoLink className="inline-block">
               <BrandLogo />
-            </Link>
+            </HomeLogoLink>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
               Передвижной шиномонтаж в Минске и по Беларуси. Выезд круглосуточно, гарантия на работы, прибытие от 15
               минут.

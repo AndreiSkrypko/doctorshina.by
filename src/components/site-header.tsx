@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/brand/brand-logo";
+import { HomeLogoLink } from "@/components/home-logo-link";
 import { MobileHeaderControls, MobileHeaderMenu, MobileNavProvider } from "@/components/mobile-header-nav";
 import { navLinks, phones } from "@/lib/site";
 
@@ -34,9 +35,9 @@ export function SiteHeader() {
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-8">
-        <Link href="/" className="group transition hover:opacity-95" aria-label="DoctorShina.by — на главную">
+        <HomeLogoLink className="group transition hover:opacity-95">
           <BrandLogo className="group-hover:brightness-105" />
-        </Link>
+        </HomeLogoLink>
 
         <nav className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => {
