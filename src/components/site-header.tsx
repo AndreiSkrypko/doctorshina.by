@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { HomeLogoLink } from "@/components/home-logo-link";
 import { MobileHeaderControls, MobileHeaderMenu, MobileNavProvider } from "@/components/mobile-header-nav";
-import { navLinks, phones } from "@/lib/site";
+import { OperatorContactButton } from "@/components/operator-contact-button";
+import { navLinks } from "@/lib/site";
 
 function isNavActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -58,12 +59,9 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <a
-          href={phones[0].href}
-          className="hidden rounded-full bg-gradient-to-r from-amber-300 to-amber-500 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/25 transition hover:brightness-110 md:inline-flex"
-        >
-          Вызвать мастера
-        </a>
+        <div className="hidden w-56 md:block">
+          <OperatorContactButton />
+        </div>
 
         <MobileHeaderControls />
         </div>

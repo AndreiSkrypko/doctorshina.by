@@ -63,7 +63,7 @@ export function MobileHeaderControls() {
             setPhonesOpen((v) => !v);
           }}
         >
-          Позвонить
+          Связаться
         </button>
         {phonesOpen ? (
           <div

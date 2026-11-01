@@ -9,6 +9,8 @@ export const premium = {
     "/images/generated/premium-gallery-3.jpg",
     "/images/generated/premium-gallery-4.jpg",
   ],
+  /** Только главная — блок «Выгодные цены», не дублирует услуги */
+  vygodnyeCeny: "/images/generated/home-vygodnye-ceny.jpg",
 } as const;
 
 /** Уникальные обложки для каждой услуги (карточки и страницы). */
@@ -22,4 +24,5 @@ export const serviceImages = {
   "sezonnoe-hranenie": "/images/services/sezonnoe-hranenie.jpg",
   "dostavka-pokryshek": "/images/services/dostavka-pokryshek.jpg",
   "hodovaya-chast": "/images/services/hodovaya-chast.jpg",
+  "prikurit-avto": "/images/services/prikurit-avto.jpg",
 } as const;

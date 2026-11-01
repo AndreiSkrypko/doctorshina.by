@@ -46,8 +46,8 @@ export default function HomePage() {
               <article className="premium-frame flex h-full flex-col">
                 <div className="relative min-h-[220px] flex-1">
                   <Image
-                    src={serviceImages["sezonnaya-zamena-shin"]}
-                    alt="Скидка на передвижной шиномонтаж в Минске"
+                    src={premium.vygodnyeCeny}
+                    alt="Выгодные цены на передвижной шиномонтаж в Минске"
                     fill
                     className="object-cover"
                     quality={90}

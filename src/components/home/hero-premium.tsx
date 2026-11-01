@@ -3,9 +3,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
-import { PhoneButtons } from "@/components/phone-buttons";
+import { OperatorContactButton } from "@/components/operator-contact-button";
 import { premium } from "@/lib/media";
-import { stats } from "@/lib/site";
+import { phones, stats } from "@/lib/site";
 
 export function HeroPremium() {
   const ref = useRef<HTMLElement>(null);
@@ -38,10 +38,20 @@ export function HeroPremium() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-100 backdrop-blur-md"
+              className="mb-4 inline-flex w-fit max-w-full flex-wrap items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold tracking-wide text-amber-100 backdrop-blur-md"
             >
-              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-              Минск · выезд 24/7
+              <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+              <span className="uppercase tracking-[0.15em] text-slate-300">Минск</span>
+              {phones.map((phone) => (
+                <a
+                  key={phone.href}
+                  href={phone.href}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-0.5 text-white transition hover:bg-amber-400/20"
+                >
+                  <Image src={phone.icon} alt="" width={14} height={14} />
+                  {phone.label}
+                </a>
+              ))}
             </motion.p>
 
             <motion.h1
@@ -61,12 +71,6 @@ export function HeroPremium() {
             >
               <p className="font-medium">
                 Прибытие — <span className="text-amber-200">от 15 минут</span>
-              </p>
-              <span className="hidden text-white/20 sm:inline" aria-hidden>
-                |
-              </span>
-              <p className="font-medium">
-                Стоимость — <span className="text-amber-200">по телефону</span>
               </p>
             </motion.div>
 
@@ -115,9 +119,9 @@ export function HeroPremium() {
               <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                 Срочный выезд
               </p>
-              <p className="mt-2 text-center text-sm text-slate-300">Мастер на связи — приедем с оборудованием</p>
+              <p className="mt-2 text-center text-sm text-slate-300">Круглосуточный выезд · приедем с оборудованием</p>
               <div className="mt-5">
-                <PhoneButtons size="large" />
+                <OperatorContactButton size="large" />
               </div>
             </div>
           </motion.div>

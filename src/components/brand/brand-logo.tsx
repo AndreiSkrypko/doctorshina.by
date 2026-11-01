@@ -25,11 +25,8 @@ export function BrandLogo({ compact = false, className = "" }: BrandLogoProps) {
             Doctor<span className="text-amber-300">Shina</span>
             <span className="text-sm font-semibold text-teal-300">.by</span>
           </span>
-          <span className="mt-1 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
-            <span>Минск</span>
-            <span className="inline-flex items-center rounded-full border border-teal-400/30 bg-teal-400/10 px-2 py-0.5 text-[10px] text-teal-200">
-              24/7
-            </span>
+          <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+            Минск
           </span>
         </span>
       ) : null}
